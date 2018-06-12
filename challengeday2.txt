@@ -1,0 +1,6 @@
+
+
+Create 2 components a Footer & a Navbar component
+From the login email information make sure you show the users email
+example "Welcome test@test.com"
+
