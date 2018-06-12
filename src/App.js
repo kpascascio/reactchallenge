@@ -9,8 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isUser: false
+      isUser: false,
+      usersEmail: ''
     }
+  }
+
+  userDetails = (valueFromChildComponent) => {
+    this.setState({usersEmail: valueFromChildComponent.email})
   }
 
   changeUserStatus = () => {
@@ -19,9 +24,13 @@ class App extends Component {
 
   checkUser = () => {
     if (this.state.isUser){
-      return Login
+      return (
+        <Login userFunctionFromApp = {this.userDetails}/>
+      )
     } else {
-      return Signup
+      return (
+        <Signup userFunctionFromApp = {this.userDetails}/>
+      )
     }
   }
 
@@ -30,8 +39,14 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={this.checkUser()}/>
-            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/">
+              {this.checkUser()}
+            </Route>
+
+            <Route exact path="/dashboard">
+              <Dashboard emailValueFromApp= {this.state.usersEmail}/>
+            </Route>
+
           </Switch>
         
           <button onClick={this.changeUserStatus}>Change</button>

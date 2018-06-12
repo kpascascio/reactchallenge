@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 class SignUp extends Component {
@@ -11,6 +11,12 @@ class SignUp extends Component {
         }
     }
 
+    handleSubmit = (e) => {
+        console.log(this.state)
+        this.props.userFunctionFromApp(this.state);
+        e.preventDefault()
+    }
+
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -18,9 +24,10 @@ class SignUp extends Component {
     }
 
     render() {
+        console.log(this.props)
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                 <h1>Sign Up</h1>
                     <div className="input-group">
                         <label htmlFor="email">Email:</label>
@@ -30,8 +37,8 @@ class SignUp extends Component {
                         <label htmlFor="password">Password:</label>   
                         <input type="password" id="passwordField" name="password" className="input-field" onChange= {this.handleChange}/>
                     </div>
-                    <button>
-                        <Link to="/dashboard">Submit</Link>
+                    <button type="submit">
+                        Submit
                     </button>
                     {/* <input type="button" value="Submit"/> */}
                 </form>   
