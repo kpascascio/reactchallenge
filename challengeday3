@@ -1,0 +1,16 @@
+IN the dashboard component, we want to get some user data. 
+
+For now we are going to use some placeholder data but still using a fetch 
+
+Challenge: Using a fetch request  from this url https://jsonplaceholder.typicode.com/users
+
+show the users name and email on our dashboard component
+
+Always Have a Plan  
+Restate the Problem 
+Divide the Problem  
+Start with What You Know 
+Reduce the Problem 
+Look for Analogies 
+Experiment 
+Don’t Get Frustrated  

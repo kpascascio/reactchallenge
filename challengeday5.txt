@@ -1,0 +1,15 @@
+From the current challenge react application:
+
+Create a new route called list
+
+Create a new component that allows a user to add grocery items in a form,
+Then after the user hits submit, the item shows up as a list item on the webpage
+
+Always Have a Plan  
+Restate the Problem 
+Divide the Problem  
+Start with What You Know 
+Reduce the Problem 
+Look for Analogies 
+Experiment 
+Don’t Get Frustrated 

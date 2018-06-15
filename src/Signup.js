@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class SignUp extends Component {
@@ -38,7 +38,9 @@ class SignUp extends Component {
                         <input type="password" id="passwordField" name="password" className="input-field" onChange= {this.handleChange}/>
                     </div>
                     <button type="submit">
-                        Submit
+                        <Link to="/dashboard" type="submit">
+                            Submit
+                        </Link>
                     </button>
                     {/* <input type="button" value="Submit"/> */}
                 </form>   

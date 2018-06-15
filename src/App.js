@@ -4,6 +4,7 @@ import Signup from './Signup';
 import Login from './Login';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './Dashboard';
+import List from './List';
 
 class App extends Component {
   constructor() {
@@ -42,11 +43,14 @@ class App extends Component {
             <Route exact path="/">
               {this.checkUser()}
             </Route>
-
+            
             <Route exact path="/dashboard">
               <Dashboard emailValueFromApp= {this.state.usersEmail}/>
             </Route>
 
+            <Route exact path="/list">
+              <List/>
+            </Route>
           </Switch>
         
           <button onClick={this.changeUserStatus}>Change</button>

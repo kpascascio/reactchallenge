@@ -1,0 +1,8 @@
+Create 2 components Login and SignUp 
+
+Each component should have a email and password input box
+
+and a submit button
+
+make sure that whatever data in the input fields gets saved 
+to the state of that specific component
